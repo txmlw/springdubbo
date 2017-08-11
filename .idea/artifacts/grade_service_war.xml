@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="grade-service:war">
+    <output-path>$PROJECT_DIR$/grade-service/target</output-path>
+    <root id="archive" name="grade-service.war">
+      <element id="artifact" artifact-name="grade-service:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="grade-web:war">
+    <output-path>$PROJECT_DIR$/grade-web/target</output-path>
+    <root id="archive" name="grade-web.war">
+      <element id="artifact" artifact-name="grade-web:war exploded" />
+    </root>
+  </artifact>
+</component>

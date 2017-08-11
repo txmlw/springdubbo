@@ -1,0 +1,578 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.liang.demo.spring</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>grade-web</module>
+        <module>grade-api</module>
+        <module>grade-service</module>
+    </modules>
+    <properties>
+        <!-- ******************仓库地址*************************** -->
+        <respository.ali.url>http://maven.aliyun.com/nexus/content/groups/public</respository.ali.url>
+
+        <!-- ******************版本号设置开始********************* -->
+        <!-- spring版本号 -->
+        <spring.version>4.1.6.RELEASE</spring.version>
+        <spring.data.mongo.version>1.7.2.RELEASE</spring.data.mongo.version>
+        <spring.data.mongo.log4j.version>1.7.2.RELEASE</spring.data.mongo.log4j.version>
+        <!-- mybatis版本号 -->
+        <mybatis.version>3.2.8</mybatis.version>
+        <mybatis-spring.version>1.3.0</mybatis-spring.version>
+        <pagehelper.version>4.1.6</pagehelper.version>
+        <!-- dobbo版本号 -->
+        <dubbo.version>2.8.4</dubbo.version>
+        <!-- 数据库连接池版本 -->
+        <druid.version>1.0.25</druid.version>
+        <!-- zookeeper 版本 -->
+        <zkclient.version>0.9</zkclient.version>
+        <!-- mongodb -->
+        <mongo.driver.version>3.3.0</mongo.driver.version>
+
+        <!-- jdbc driver setting -->
+        <!-- oracle 驱动 -->
+        <oracle.driver.version>6</oracle.driver.version>
+        <mysql.driver.version>5.1.24</mysql.driver.version>
+
+        <!-- tools version setting -->
+        <!-- log4j日志文件管理包版本 -->
+        <slf4j.version>1.7.7</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+        <javassist.version>3.12.1.GA</javassist.version>
+        <aspectj.version>1.6.10</aspectj.version>
+        <httpclient.version>4.5.2</httpclient.version>
+        <resteasy.version>3.0.7.Final</resteasy.version>
+        <fastjson.version>1.2.16</fastjson.version>
+        <junit.version>4.12</junit.version>
+        <javax-inject.version>1</javax-inject.version>
+        <!-- <servlet-api.version>3.1.0</servlet-api.version> -->
+        <servlet-api.version>2.5</servlet-api.version>
+        <jsp-api.version>2.3.1</jsp-api.version>
+        <jstl.version>1.2</jstl.version>
+        <commons-beanutils.version>1.8.0</commons-beanutils.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+        <commons-collections4.version>4.1</commons-collections4.version>
+        <commons-logging.version>1.2</commons-logging.version>
+        <jackson.version>2.6.3</jackson.version>
+        <commons-fileupload.version>1.2.2</commons-fileupload.version>
+        <dozer.version>5.5.1</dozer.version>
+        <!-- 消息 -->
+        <rocketmq-client.version>3.2.6</rocketmq-client.version>
+        <rocketmq-all.version>3.2.6</rocketmq-all.version>
+        <netty.version>3.7.0.Final</netty.version>
+        <httpmime.version>4.5.2</httpmime.version>
+        <freemarker.version>2.3.23</freemarker.version>
+        <!-- aviator版本号 -->
+        <aviator.version>2.3.5</aviator.version>
+        <!-- 缓存 -->
+        <jedis.version>2.6.2</jedis.version>
+        <spring-data-commons.version>1.10.2.RELEASE</spring-data-commons.version>
+        <spring-data-redis.version>1.4.2.RELEASE</spring-data-redis.version>
+        <!-- 加密 -->
+        <commons-codec.version>1.10</commons-codec.version>
+        <org-apache-poi.version>3.15</org-apache-poi.version>
+        <aspectjweaver.version>1.8.9</aspectjweaver.version>
+        <poi-scratchpad.version>3.12</poi-scratchpad.version>
+        <poi-ooxml.version>3.15</poi-ooxml.version>
+        <poi-ooxml-schemas.version>3.15</poi-ooxml-schemas.version>
+        <xercesImpl.version>2.9.1</xercesImpl.version>
+        <xmlbeans.version>2.6.0</xmlbeans.version>
+        <dom4j.version>2.0.0</dom4j.version>
+        <!-- indigo的jar包版本 -->
+        <indigo.version>0.0.1</indigo.version>
+        <!-- ******************版本号设置结束********************* -->
+
+        <!-- ******************系统环境设置开始********************* -->
+        <jdk.version>1.8</jdk.version>
+        <jetty.version>9.3.11.v20160721</jetty.version>
+        <webserver.port>8080</webserver.port>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- ******************系统环境设置结束********************* -->
+
+
+        <!-- ******************系统工程模块版本设置开始********************* -->
+        <grade-api.version>0.0.1-SNAPSHOT</grade-api.version>
+        <elastic-job.version>1.1.1</elastic-job.version>
+        <!-- ******************系统工程模块版本设置结束********************* -->
+
+        <!-- ******************checkstyle 配置 开始********************* -->
+        <checkstyle.config.location>config/checkstyle.xml</checkstyle.config.location>
+        <!-- ******************checkstyle 配置 结束********************* -->
+
+        <!-- drools 添加 jar包 -->
+        <antlr-runtime.version>3.3</antlr-runtime.version>
+        <rule.version>1.0.0-SNAPSHOT</rule.version>
+        <core.version>3.2.0.666</core.version>
+        <drools.version>5.5.0.Final</drools.version>
+        <knowledge.version>5.5.0.Final</knowledge.version>
+        <jbpm-flow.version>5.4.0.Final</jbpm-flow.version>
+        <jxl.version>2.6.10</jxl.version>
+        <jxl-core.version>0.9.9</jxl-core.version>
+        <jxl-reader.version>0.9.9</jxl-reader.version>
+        <mvel2.version>2.1.3.Final</mvel2.version>
+    </properties>
+
+    <!-- 设定主仓库，按设定顺序进行查找。 -->
+    <repositories>
+        <repository>
+            <id>archiva-self</id>
+            <name>archiva-self of China</name>
+            <url>${respository.ali.url</url>
+        </repository>
+
+    </repositories>
+
+    <!-- 设定插件仓库-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>archiva-self</id>
+            <name>archiva-self of China</name>
+            <url>${respository.ali.url}</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.liang.demo.spring</groupId>
+                <artifactId>grade-api</artifactId>
+                <version>${grade-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq-client.version}</version>
+            </dependency>
+
+            <!-- 第三方关联系统 开始 -->
+            <dependency>
+                <groupId>com.indigopacific</groupId>
+                <artifactId>iprovider</artifactId>
+                <version>${indigo.version}</version>
+            </dependency>
+
+            <!--单元测试 -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+
+            <!-- 添加oracle jdbc driver -->
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc14</artifactId>
+                <version>${oracle.driver.version}</version>
+            </dependency>
+            <!-- 添加mysql jdbc driver -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.driver.version}</version>
+            </dependency>
+
+            <!-- poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${org-apache-poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-scratchpad</artifactId>
+                <version>${poi-scratchpad.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi-ooxml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-schemas</artifactId>
+                <version>${poi-ooxml-schemas.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xerces</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>${xercesImpl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlbeans</groupId>
+                <artifactId>xmlbeans</artifactId>
+                <version>${xmlbeans.version}</version>
+            </dependency>
+
+            <!-- jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <!-- 日志 -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- j2ee web spec -->
+            <!-- Servlet -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>javax.servlet.jsp-api</artifactId>
+                <version>${jsp-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-oxm</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.googlecode.aviator</groupId>
+                <artifactId>aviator</artifactId>
+                <version>${aviator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
+            <!-- 补充 -->
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.netty</groupId>
+                <artifactId>netty</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+            <!-- elastic job start -->
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>elastic-job-core</artifactId>
+                <version>${elastic-job.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>elastic-job-spring</artifactId>
+                <version>${elastic-job.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>elastic-job-api-core</artifactId>
+                <version>${elastic-job.version}</version>
+            </dependency>
+            <!-- elastic job end -->
+
+            <!-- drools 添加 jar包 start -->
+            <dependency>
+                <groupId>com.antlr</groupId>
+                <artifactId>antlr-runtime</artifactId>
+                <version>${antlr-runtime.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>core</artifactId>
+                <version>${core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>drools-compiler</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>drools-core</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>drools-decisiontables</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>drools-templates</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>jbpm-flow</artifactId>
+                <version>${jbpm-flow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>jbpm-flow-builder</artifactId>
+                <version>${jbpm-flow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>jxl</artifactId>
+                <version>${jxl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>jxls-core</artifactId>
+                <version>${jxl-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>jxls-reader</artifactId>
+                <version>${jxl-reader.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>knowledge-api</artifactId>
+                <version>${knowledge.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>knowledge-internal-api</artifactId>
+                <version>${knowledge.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.drools</groupId>
+                <artifactId>mvel2</artifactId>
+                <version>${mvel2.version}</version>
+            </dependency>
+            <!-- drools 添加 jar包 end -->
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <!-- Compiler 插件, 设定JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+            <!-- 资源配置插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <!-- war 打包插件, 设定war包名称不带版本号 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <webappDirectory>${project.build.directory}/${project.artifactId}</webappDirectory>
+                    <warName>${project.artifactId}</warName>
+                </configuration>
+            </plugin>
+
+            <!-- install插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
+
+            <!-- clean插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.6.1</version>
+            </plugin>
+
+            <!-- ant插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+            </plugin>
+
+            <!-- dependency插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.10</version>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <configuration>
+                    <aggregate>true</aggregate>
+                    <encoding>UTF-8</encoding>
+                    <tags>
+                        <tag>
+                            <name>description</name>
+                            <placement>a</placement>
+                            <head>描述</head>
+                        </tag>
+                        <tag>
+                            <name>date</name>
+                            <placement>a</placement>
+                            <head>创建日期</head>
+                        </tag>
+                    </tags>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <!-- 指定需要编译的源文件 -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+</project>
