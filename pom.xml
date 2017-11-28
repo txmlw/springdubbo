@@ -24,7 +24,7 @@
         <mybatis-spring.version>1.3.0</mybatis-spring.version>
         <pagehelper.version>4.1.6</pagehelper.version>
         <!-- dobbo版本号 -->
-        <dubbo.version>2.8.4</dubbo.version>
+        <dubbo.version>2.5.3</dubbo.version>
         <!-- 数据库连接池版本 -->
         <druid.version>1.0.25</druid.version>
         <!-- zookeeper 版本 -->
@@ -63,7 +63,7 @@
         <!-- 消息 -->
         <rocketmq-client.version>3.2.6</rocketmq-client.version>
         <rocketmq-all.version>3.2.6</rocketmq-all.version>
-        <netty.version>3.7.0.Final</netty.version>
+        <netty.version>3.2.9.Final</netty.version>
         <httpmime.version>4.5.2</httpmime.version>
         <freemarker.version>2.3.23</freemarker.version>
         <!-- aviator版本号 -->
